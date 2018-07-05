@@ -78,7 +78,7 @@ namespace eie
 	template<class Enum, class S>
 	Iterator<Enum> &Iterator<Enum, S>::operator--()
 	{
-		m_value = Enum(std::size_t(m_value)+1);
+		m_value = Enum(std::size_t(m_value)-1);
 		return *this;
 	}
 
@@ -86,7 +86,7 @@ namespace eie
 	Iterator<Enum> Iterator<Enum, S>::operator--(int)
 	{
 		Enum result = m_value;
-		m_value = Enum(std::size_t(m_value)+1);
+		m_value = Enum(std::size_t(m_value)-1);
 		return result;
 	}
 
